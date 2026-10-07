@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --fuente: 'Poppins', 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+article {
+    font-family: var(--fuente);
+    overflow-x: hidden;
+}
+
+article img {
+    max-width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= INICIO ================= */
+.inicio {
+    background-color: var(--azul-marino);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente);
+}
+
+.info {
+    padding: 0px 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+.inicio h1 {
+    font-size: 45px;
+    color: var(--blanco);
+}
+
+.inicio h2 {
+    color: var(--texto-gris);
+}
+
+.btn-Contacto button {
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    border: 5px var(--azul-brillante) solid;
+    background-color: var(--azul-primario);
+    font-size: 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* scale en vez de font-size: no mueve el resto de la página al pasar el mouse */
+.btn-Contacto button:hover,
+.btn-Contacto button:focus-visible {
+    transform: scale(1.08);
+    border: 5px var(--azul-primario) solid;
+    background-color: var(--azul-brillante);
+}
+
+.ar-img img {
+    height: 500px;
+    width: auto;
+}
+
+/* ================= NOSOTROS ================= */
+.nosotros {
+    font-family: var(--fuente);
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotros .titulo {
+    font-size: 25px;
+    color: var(--azul-primario);
+    padding-left: 40px;
+    padding-top: 40px;
+}
+
+.ini {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 40px;
+    margin-bottom: 50px;
+}
+
+.ini img {
+    height: 250px;
+    width: auto;
+}
+
+.ini .loll {
+    color: var(--azul-marino);
+    width: 60%;
+}
+
+.div-sesarollo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.div-sesarollo div {
+    color: white;
+    border-radius: 20px;
+    border: 5px solid var(--azul-primario);
+    margin: 10px 10px;
+    padding: 10px 10px;
+    background-color: var(--azul-marino);
+    width: 30%;
+}
+
+/* ================= TECNOLOGÍAS ================= */
+.tecnologias {
+    color: var(--azul-brillante);
+    background-color: var(--azul-marino);
+    display: flex;
+   flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 10px;
+}
+
+.et{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 10px;
+}
+.tecnologias .tec {
+    --acento: var(--azul-brillante);
+    border: 5px solid var(--acento);
+    border-radius: 15px;
+    background: linear-gradient(160deg, var(--azul-oscuro) 40%, var(--acento) 400%);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Un color por categoría */
+.tecnologias .tec:nth-child(1) { --acento: #ff8a3d; } /* Frontend: naranja */
+.tecnologias .tec:nth-child(2) { --acento: #35d6a4; } /* Backend: verde */
+.tecnologias .tec:nth-child(3) { --acento: #4fc3ff; } /* Framework: celeste */
+.tecnologias .tec:nth-child(4) { --acento: #c58bff; } /* Base de datos: violeta */
+
+.tecnologias .tec h2 {
+    margin: 0;
+    color: var(--acento);
+}
+
+.img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Cada logo va sobre un recuadro claro para que resalte sus colores */
+.img > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-bottom: 4px solid var(--acento);
+}
+
+.tecnologias img {
+    height: 100px;
+    width: auto;
+}
+
+/* ================= CONTACTO ================= */
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: var(--blanco, #fff);
+    font-family: var(--fuente);
+}
+
+.contacto-texto {
+    flex: 1 1 280px;
+    max-width: 420px;
+    color: var(--azul-marino);
+}
+
+.contacto-texto h1 {
+    color: var(--azul-primario);
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.contacto-texto p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.form-contacto {
+    flex: 1 1 360px;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 25px;
+    border: 5px solid var(--azul-primario);
+    border-radius: 20px;
+    background-color: var(--azul-marino);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: white;
+    font-size: 18px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px; /* 16px evita el zoom automático de iOS al enfocar */
+    font-family: inherit;
+    color: white;
+    background-color: var(--azul-oscuro);
+    border: 3px solid var(--azul-primario);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--azul-brillante);
+    box-shadow: 0 0 0 3px var(--azul-brillante);
+}
+
+/* Campo trampa anti-spam, oculto para personas */
+.campo-trampa {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.btn-enviar {
+    transition: 0.3s;
+    border-radius: 10px;
+    padding: 12px 20px;
+    color: white;
+    border: 5px var(--azul-brillante) solid;
+    background-color: var(--azul-primario);
+    font-size: 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn-enviar:hover:not(:disabled),
+.btn-enviar:focus-visible {
+    border: 5px var(--azul-primario) solid;
+    background-color: var(--azul-brillante);
+}
+
+.btn-enviar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.estado-form {
+    margin: 0;
+    min-height: 1.2em;
+    font-size: 16px;
+}
+
+.estado-form.ok {
+    color: #7ee2a8;
+}
+
+.estado-form.error {
+    color: #ff9b9b;
+}
+
+/*============= TABLET (≤ 900px) ================= */
+@media (max-width: 900px) {
+    .info {
+        padding: 0 30px;
+    }
+
+    .inicio h1 {
+        font-size: 36px;
+    }
+
+    .ar-img img {
+        height: 350px;
+    }
+
+    .ini .loll {
+        width: 100%;
+    }
+
+    .div-sesarollo div {
+        width: 45%;
+    }
+}
+
+/* ================= MÓVIL (≤ 768px) ================= */
+@media (max-width: 768px) {
+    /* Inicio: todo en una columna */
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 0 0;
+    }
+
+    .info {
+        padding: 0 20px;
+    }
+
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .inicio h2 {
+        font-size: 18px;
+    }
+
+    .ar-img img {
+        height: auto;
+        width: 100%;
+        max-width: 380px;
+    }
+
+    /* Nosotros */
+    .nosotros .titulo {
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
+    .ini {
+        flex-direction: column;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .ini .loll {
+        width: 100%;
+    }
+
+    .ini .loll h2 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .ini .lol {
+        align-self: center;
+    }
+
+    .ini img {
+        height: auto;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .div-sesarollo {
+        padding: 0 15px 30px;
+    }
+
+    .div-sesarollo div {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    /* Tecnologías: tarjetas a todo el ancho */
+
+    .tecnologias {
+        gap: 15px;
+        padding: 20px 15px;
+    }
+    .tecnologias h1{
+        font-size: 30px;
+
+    }
+    .tecnologias .titulo {
+                font-size: 30px;
+
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+
+    .tecnologias .tec {
+        width: 100%;
+    }
+
+    .tecnologias img {
+        height: 100px;
+    }
+
+    .img > div {
+        padding: 10px;
+    }
+
+    /* Contacto */
+    .contacto {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .contacto-texto {
+        max-width: none;
+    }
+
+    .contacto-texto p {
+        font-size: 18px;
+    }
+
+    .form-contacto {
+        max-width: none;
+        padding: 18px;
+    }
+
+    .btn-enviar {
+        width: 100%;
+    }
+
+    /* Footer centrado y en columna */
+    .footer {
+        padding: 30px 20px 15px;
+        text-align: center;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-marca p {
+        margin: 0 auto;
+    }
+}
+
+/* ================= MÓVIL PEQUEÑO (≤ 400px) ================= */
+@media (max-width: 400px) {
+    .inicio h1 {
+        font-size: 26px;
+    }
+
+    .btn-Contacto button {
+        font-size: 18px;
+    }
+
+    .tecnologias img {
+        height: 85px;
+    }
+
+    .img {
+        gap: 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
